@@ -8,22 +8,29 @@
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
   }
+  :root{
+    --bg-color: rgb(130, 155, 164);
+    --text-color: white;
+  }
+
+  html {
+    font-size: 60%;
+    overflow-x: hidden;
+  }
   
   body {
-    background: gray;
+    background: rgb(148, 170, 176);
     color: white;
   }
   
   header {
-    background-color: rgb(152, 223, 248);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    height: 15%;
     padding: 4rem 12%;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(100px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,7 +97,7 @@
     background-position: center;
     background-repeat: no-repeat;
     animation: slide 18s infinite;
-    filter: brightness(100%) blur(3px);
+    filter: brightness(70%) blur(5px);
   }
   
   /* Corrected animation */
@@ -124,9 +131,35 @@
   .hero-inner {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
     text-align: left;
     justify-content: center;
-    margin-top: 3rem;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+  }
+
+
+  .hero-inner h3 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+    text-align: center;
+
+  }
+
+
+  .hero-inner h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+  }
+
+  .hero-inner p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.8;
+    max-width: 1000px;
   }
   
