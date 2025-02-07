@@ -6,30 +6,31 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif; 
+    font-family: "Poppins", sans-serif;
   }
-
-body{
-  background: gray ;
-  color: white;
-}
-
-header {
-  background-color: transparent;
-  position: flexed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  padding: 4rem 12%;
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 5;
-}
-
-.logo {
+  
+  body {
+    background: gray;
+    color: white;
+  }
+  
+  header {
+    background-color: rgb(152, 223, 248);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 15%;
+    padding: 4rem 12%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+  }
+  
+  .logo {
     font-size: 3rem;
     color: var(--text-color);
     font-weight: 800;
@@ -40,7 +41,7 @@ header {
   .logo:hover {
     transform: scale(1.1);
   }
-
+  
   .navbar a {
     font-size: 1.8rem;
     color: white;
@@ -49,9 +50,83 @@ header {
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
   }
-
-.navbar a:hover,
-.navbar a.active {
-  color: white;
-  border-bottom: 1px solid white;
+  
+  .navbar a:hover,
+  .navbar a.active {
+    color: white;
+    border-bottom: 1px solid white;
+  }
+  
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:scale-down;
+    z-index: -1;
+  }
+  
+  .slideshow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: slide 18s infinite;
+    filter: brightness(100%) blur(3px);
+  }
+  
+  /* Corrected animation */
+  @keyframes slide {
+    0% {
+        background-image: url('images/image4.JPG');
+    }
+    28.57% {
+        background-image: url('images/image4.JPG');
+    }
+    28.58% {
+        background-image: url('images/image2.JPG');
+    }
+    57.14% {
+        background-image: url('images/image2.JPG');
+    }
+    57.15% {
+        background-image: url('images/image7.JPG');
+    }
+    85.71% {
+        background-image: url('images/image7.JPG');
+    }
+    85.72% {
+        background-image: url('images/image4.JPG'); /* Loop back to the first image */
+    }
+    100% {
+        background-image: url('images/image4.JPG');
+    }
 }
+  
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  
