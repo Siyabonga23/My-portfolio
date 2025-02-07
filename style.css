@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,160 +8,218 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
-  }
-  :root{
+}
+
+:root {
     --bg-color: rgb(130, 155, 164);
     --text-color: white;
-  }
+    --main-color: #00ffee;
+    --accent-color: rgb(75, 75, 193);
+}
 
-  html {
-    font-size: 60%;
+html {
+    font-size: 62.5%;
     overflow-x: hidden;
-  }
-  
-  body {
-    background: rgb(148, 170, 176);
-    color: white;
-  }
-  
-  header {
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Push items apart */
+  align-items: center;
+  width: 80%; /* Adjust width to control centering */
+  max-width: 1200px; /* Limit width for responsiveness */
+}
+
+/* Header */
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    padding: 4rem 12%;
+    padding: 2rem 12%;
     backdrop-filter: blur(100px);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    z-index: 5;
-  }
-  
-  .logo {
-    font-size: 3rem;
-    color: var(--text-color);
+    z-index: 10;
+}
+
+.logo-container {
+    font-size: 3rem; 
     font-weight: 800;
     cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
-  .logo:hover {
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
     transform: scale(1.1);
-  }
-  
-  .navbar a {
+}
+
+
+
+.navbar a {
     font-size: 1.8rem;
-    color: white;
-    margin-left: 4rem;
+    left: ;
+    color: var(--text-color);
+    margin-left: 3rem;
     font-weight: 500;
     transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-  }
-  
-  .navbar a:hover,
-  .navbar a.active {
-    color: white;
-    border-bottom: 1px solid white;
-  }
-  
-  .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar a:hover, .navbar a.active {
+    border-bottom: 2px solid white;
+}
+
+/* Hero Section */
+.hero {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    height: 100vh;
     text-align: center;
+    position: relative;
     overflow: hidden;
-  }
-  
-  .slideshow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit:scale-down;
-    z-index: -1;
-  }
-  
-  .slideshow::before {
-
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: slide 18s infinite;
-    filter: brightness(30%) blur(3px);
-  }
-  
-  /* Corrected animation */
-  @keyframes slide {
-    0% {
-        background-image: url('images/image4.JPG');
-    }
-    28.57% {
-        background-image: url('images/image4.JPG');
-    }
-    28.58% {
-        background-image: url('images/image2.JPG');
-    }
-    57.14% {
-        background-image: url('images/image2.JPG');
-    }
-    57.15% {
-        background-image: url('images/image7.JPG');
-    }
-    85.71% {
-        background-image: url('images/image7.JPG');
-    }
-    85.72% {
-        background-image: url('images/image4.JPG'); /* Loop back to the first image */
-    }
-    100% {
-        background-image: url('images/image4.JPG');
-    }
 }
-  
-  .hero-inner {
+
+.slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/image2.JPG') center/cover;
+    filter: brightness(80%) blur(5px);
+    z-index: -1;
+}
+
+.hero-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: left;
-    justify-content: center;
     text-align: center;
-    height: 100vh;
-    width: 100%;
-  }
+}
 
-
-  .hero-inner h3 {
-    margin-bottom: 2rem;
-    margin-top: 1rem;
-    font-size: 3.5rem;
-    text-align: center;
-
-  }
-
-
-  .hero-inner h1 {
+.hero-content h1 {
     font-size: 7rem;
     font-weight: 700;
-    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     line-height: 1;
-  }
+}
 
-  .hero-inner p {
+.hero-content h3 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-content p {
     font-size: 2rem;
     font-weight: 500;
+    max-width: 80rem;
     line-height: 1.8;
-    max-width: 1000px;
-  }
-  
+    margin-bottom: 2.5rem;
+}
+
+/* Social Icons */
+.social-icons a {
+    display: inline-flex;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    border: 2px solid white;
+    color: var(--text-color);
+    margin: 1rem;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 0 15px white;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+    padding: 1rem 2.8rem;
+    background: white;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: black;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 15px white;
+}
+
+.btn-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn-group a {
+    border: 2px solid white;
+    box-shadow: none;
+    color: var(--text-color);
+    background: transparent;
+}
+
+.btn-group a:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 0 15px white;
+}
+
+/* Tech Stack Section */
+.tech-stack {
+    height: 50vh;
+    width: 100%;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.stack-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.stack-inner h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    grid-column: span 3;
+    margin-bottom: 2rem;
+}
+
+.stack-inner a {
+    font-size: 4rem;
+    color: var(--accent-color);
+    transition: transform 0.3s;
+}
+
+.stack-inner a:hover {
+    transform: scale(1.1);
+}
