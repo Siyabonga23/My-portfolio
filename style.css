@@ -11,7 +11,7 @@
 }
 
 :root {
-    --bg-color: rgb(130, 155, 164);
+    --bg-color: white;
     --text-color: white;
     --main-color: #00ffee;
     --accent-color: rgb(75, 75, 193);
@@ -459,14 +459,14 @@ body {
 .contact-section{
     border: 2px solid red;
     width: 100%;
-    /* background-color: rgb(241, 241, 241); */
+    background-color: rgb(241, 241, 241);
+    color: black;
     height: 80vh;
-    max-width: 900px;
     margin: 0 auto;
 }
 
 .contact-container{
-    border: 2px solid slateblue;
+    border: 2px solid blue;
     height: 100px;
     width: 100%;
     margin-bottom: 10px;
@@ -482,3 +482,26 @@ body {
 /* learn how max-margin works */
 /* fix contact me sectopn */
 /* make whole website responsive */
+
+
+footer {
+    /* background-color: black; */
+    filter: grayscale(100%) opacity(60%);
+    height: 15vh;
+    margin: 0 auto;
+  }
+  
+  footer p {
+    padding: 50px;
+    /* color: white; */
+    color: black;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  
+  .highlight{
+    font-weight: bolder;
+  }
+
+  
