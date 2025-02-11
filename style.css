@@ -295,7 +295,6 @@ body {
         height: auto;
         padding: 100px 5% 10px;
         
-        
     }
 
     .hero-container{
@@ -373,6 +372,7 @@ body {
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    padding: 2rem 0;
     
 }
 
@@ -386,7 +386,7 @@ body {
 .stack-section h4 {
     font-size: 4rem;
     font-weight: 500;
-    height: 500px;
+    /* height: 500px; */
     margin-top: 35rem;
     margin-bottom: 6rem;
     color: black;
@@ -407,6 +407,7 @@ body {
     height: auto;
     margin-bottom: 10px;
     filter: grayscale(100%) opacity(80%);
+    transition: width 0.3s ease-in-out;
 
 }
 
@@ -417,11 +418,42 @@ body {
 }
 
 .pair{
-
     text-align: center;
     color: black;
 }
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .stack-section {
+        height: auto; 
+        margin-top: 4.2rem;
+        padding: 2rem 0; 
+    }
 
+    .stack-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Allow more space for smaller items */
+        width: 90%; /* Increase the width on smaller screens */
+    }
+
+    .stack-section h4 {
+        font-size: 4rem; 
+        margin-top: 2rem; 
+        margin-bottom: rem;
+        font-weight: 500;
+        filter: grayscale(100%) opacity(30%); 
+    }
+
+    .row {
+        height: auto; /* Allow rows to adjust height as needed */
+    }
+
+    .pair img {
+        width: 70px; /* Reduce icon size for smaller screens */
+    }
+
+    .pair h3 {
+        font-size: 18px; /* Adjust text size */
+    }
+}
 
 
 /* About Me */
