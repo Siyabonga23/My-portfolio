@@ -1,33 +1,39 @@
 // Navbar scroll effect
 window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
-    const navLinks = document.querySelector(".nav-links a");
-    const hamburgerBars = document.querySelector(".hamburger .bar");
+    const navLinks = document.querySelectorAll(".nav-links a"); // Selects all the anchor links
+    const hamburgerBars = document.querySelectorAll(".hamburger .bar"); // Selects all the bars inside hamburger
+    const logo = document.querySelector(".logo a"); // Selects the logo anchor tag
 
-    if (window.scrollY > 670) {
+
+    console.log('Scroll position:',this.window.scrollY);
+
+
+    if (window.scrollY > 20) {
         navbar.classList.add("scrolled");
+
+        // Change link colors to black
         navLinks.forEach(link => link.style.color = "black");
-        
-        // Change logo color
+
+        // Change logo color to black
         logo.style.color = "black";
 
-        // Change hamburger bars color
+        // Change hamburger bars color to black
         hamburgerBars.forEach(bar => bar.style.backgroundColor = "black");
 
     } else {
         navbar.classList.remove("scrolled");
 
-        // Reset text color for all links
+        // Reset text color for all links to white
         navLinks.forEach(link => link.style.color = "white");
-        
-        // Reset logo color
+
+        // Reset logo color to white
         logo.style.color = "white";
 
-        // Reset hamburger bars color
+        // Reset hamburger bars color to white
         hamburgerBars.forEach(bar => bar.style.backgroundColor = "white");
     }
 });
-
 
 // Hamburger menu toggle
 document.addEventListener("DOMContentLoaded", function () {

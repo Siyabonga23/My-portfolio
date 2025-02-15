@@ -54,82 +54,79 @@ section {
     justify-content: space-between;
 }
 
-/* Header */
-.navbar{
+/* Header */.navbar {
+    border: 2px solid red;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
-    padding: 24px 12%;
+    padding: 24px 18%;
     backdrop-filter: blur(100px);
     z-index: 1000;
     justify-content: flex-start;
     gap: 2rem;
-    transition: 0.3s ease-in-out, color 0.3s ease-in-out;
-
+    background-color: transparent;
+    transition: background-color 0.3s ease;
 }
 
-.navbar .logo a{
+.navbar .logo a {
     color: white;
     text-decoration: none;
     font-size: 24px;
     cursor: pointer;
 }
+
 .navbar .nav-links {
     list-style-type: none;
     display: flex;
     gap: 3rem;
+    color: white;
+    transition: color 0.3s ease;
 }
 
-.navbar .nav-links li{
+.navbar .nav-links li {
     margin: 0 15px;
 }
 
-.navbar .nav-links li a{
+.navbar .nav-links li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
 .navbar a:hover {
-  border-bottom: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
-
-.navbar .scrolled{
-    background: white;
-}
-
-
-.navbar.scrolled a{
-    color: black !important; 
-}
-
-.navbar.scrolled .hamburger .bar{
+.navbar .scrolled {
     background-color: black;
 }
 
-.hamburger{
+.navbar.scrolled .nav-links li a{
+    color: black ;
+}
+
+.navbar.scrolled .hamburger .bar {
+    background-color: black !important;
+}
+
+.hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    z-index: 1100; 
+    z-index: 1100;
     background: transparent;
     border: none;
-    
 }
 
-.hamburger .bar{
-
+.hamburger .bar {
     height: 3px;
     width: 25px;
     background-color: white;
     margin: 5px 0;
 }
-
 
 @media(max-width: 768px) {
     .navbar {
@@ -175,12 +172,6 @@ section {
     padding-bottom: 10%;
     row-gap: 30px;
 }
-
-/* 
-    Welcome = home
-    greeting = helloworld
-    greet-hello = hello-world 
-    greet-messsage = hello-message */
 
 
 .name{
@@ -246,13 +237,11 @@ section {
 
 /* Buttons */
 .btn {
-    /* padding: -1rem 2.8rem; */
     padding: 9px 15px;
     background: white;
     border-radius: 4rem;
     font-size: 1rem;
     color: black;
-    /* font-weight: 600; */
     transition: 0.3s;
     cursor: pointer;
     box-shadow: 0 0 15px white;
@@ -498,8 +487,6 @@ section {
 
 
 .contact-section{
-    border: 2px solid red;
-
     background-color: white;
     padding-left: 10%; 
     padding-right:10% ;
@@ -553,25 +540,32 @@ input[type=submit]:hover{
 }
 
 
-footer {
+.footer{
     background-color: white;
-    margin: 0 auto;
-    font-size: 1px;
-    filter: grayscale(100%) opacity(90%);
-
-  }
-  
-  footer p {
-    padding: 50px;
     color: black;
-    font-size: 20px;
+    padding: 20px;
     text-align: center;
-  }
-  
-  
-  .highlight{
-    font-weight: bolder;
-  }
+    filter: grayscale(50%) opacity(50%);
+    position: relative;
+    width: 100%;
+    bottom: 0;
+
+}
+
+.footer-content{
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
+.footer a{
+    color: blue;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: rgb(255, 0, 234);
+}
+
 
 @media screen and (max-width:700px) { 
     
@@ -605,8 +599,8 @@ footer {
     }
 
     footer {
-    filter: grayscale(100%) opacity(90%);
-    font-size: 10px; /* Smaller text for small screens */
+    padding: 1px;
+    font-size: 14px;
     }
 }
 
@@ -619,6 +613,7 @@ footer {
     }
 
     .contact-form {
+
         width: 90%;
         font-size: 14px;
         padding: 10px;
