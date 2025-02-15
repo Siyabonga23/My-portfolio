@@ -36,7 +36,32 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+
+    <section class="home">
+        <div class="home-content">
+            <div class="slideshow"></div>
+
+            <div class="helloworld">
+                <p class="hello-world"> Hello World!, I'm <span class="name">Siyabonga Ngwenyama</span>.</p>
+                <p class="hello-message" style="font-size: 20px; ">Software Engineer | Web Developer</p>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/siyabonga-ngwenyama-4a4557220/" target="_blank">
+                <i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/Siyabonga23" target="_blank">
+                <i class='bx bxl-github'></i></a>
+        </div>
+        <div class="btn-group">
+            <a href="#about" class="btn">About Me</a>
+            <a href="#contact" class="btn">Contact Me</a>
+
+        </div>
+    </section>
+
+
+
+    <!-- <section class="hero" id="home">
         <div class="hero-container">
             
             <div class="slideshow"></div>
@@ -52,6 +77,7 @@
                     <a href="#contact" class="btn">Contact Me</a>
                 </div>
             </div>
+
     
             <div class="hero-right">
                 <h3>I'm Siyabonga Ngwenyama
@@ -59,7 +85,6 @@
                 <h2>Software Engineer | Web Developer</h2>
                 <p>
                     a software developer who loves creating user-friendly and innovative applications. 
-    
                 </p>
 
                 <p>With a strong background in coding and a knack for problem-solving, I enjoy working on exciting projects that push the boundaries of technology.
@@ -69,7 +94,7 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="stack-section" id="stack-section">
         <h4>My Tech Stack</h4> <!-- Heading -->
@@ -120,97 +145,120 @@
 
     <!-- About Me Section -->
     <section class="about-section" id="about">
-        <div class="about-container">
-            
-            <div class="about-content">
 
-                <div class="about-left">
-                    <h1>About Me</h1>
-                    <p>
-                        I am a passionate and driven software developer with a strong foundation in mathematics and computer science. 
-                        My journey into technology began with a deep love for learning and problem-solving, which initially led me to a career in teaching. 
-                        There, I developed the ability to break down complex concepts and collaborate effectively—skills that continue to shape my approach to software development.
+        <h2 class="heading">About Me</h2>
+
+        <div class="about-content">
+        
+            <div class="about-text">
+
+                    <p  class="text" style="padding-top: 30px;">
+                        I’m <strong style="color: inherit;">Siyabonga Ngwenyama</strong>!, a passionate and results-driven software developer with a strong foundation in full-stack development. 
+                        I have experience building and optimizing web applications, APIs, and database-driven systems using Java, Python, JavaScript, and SQL. 
+                        My recent projects include developing a robot simulation world using Javalin and SQLite, integrating unit testing (JUnit, Mockito), 
+                        and streamlining deployments with Docker and GitLab CI/CD.
                     </p>
-                    <p>
-                        Eager to expand my technical expertise, I transitioned into the world of programming through WeThinkCode_, where I immersed myself in hands-on projects and honed my analytical thinking. 
-                        Through experiences like Robot Worlds and Code Clinics, I thrived in team-driven environments that emphasized collaboration, adaptability, and continuous learning. 
-                        Working on these projects strengthened my ability to navigate agile methodologies, communicate effectively, and contribute meaningfully to team objectives.
-                    </p>
-                    <p>
-                        My technical acumen, combined with my passion for problem-solving and my commitment to professional growth, drives me to take on new challenges and continuously refine my skills. 
-                        I am excited to apply my knowledge, work alongside innovative teams, and make meaningful contributions in the world of software development.
+                    <br>
+                    <p class="text">I thrive in collaborative environments, leveraging Git for version control and following agile development practices to deliver high-quality software. 
+                        Beyond technical expertise, my background in teaching, leadership, and technical support has shaped me into a strong communicator and problem-solver.
                     </p> 
-                </div>
-    
-                <div class="about-right">
-                    <img src="images/image4.JPG" alt="Profile Image">
-                </div>
 
+                    <br>
+                    <p class="text">
+                        I’m eager to contribute to innovativeb projects where I can apply my skills, continue learning, and make an impact. Let’s connect and build something great!
+                    </p>
+
+            </div>
+
+            <div class="about-image">
+                <img  class="about-photo" src="images/image4.JPG" alt="Profile Image">
             </div>
             
         </div>
     </section>
 
+    <!-- project = projects-section
+    heading projects-heading = heading projects-header
+    project-content = project-img-container
+    project = projects -->
+
+
     <section class="projects-section" id="projects">
-        <h4>Projects</h4>
+        <h2 class="heading projects-header">Projects</h4>
 
         <!--    Main Box -->
         <div class="projects-container">
 
-            <!-- Row 1 -->
-            <div class="projects-row">
-                <div class="projects-pair">
-                    <div class="project-image">
-                        <img src="images/projects/laptop.jpg" alt="">
-                        <p>This project is a personal portfolio website designed to showcase my skills, projects, 
-                            and experience as a software development student. <br> It serves as an interactive resume, 
-                            providing potential employers and collaborators with insights into my technical abilities, 
-                            background, and achievements.</p>
-                    
-                    </div>
-                    <h3>personal portfoilio</h3>
-                </div>
-                <div class="projects-pair">
-                    <div class="project-image">
-                        <img src="images/projects/robotworlds.jpg" alt="">
-                        <p>Robot Worlds is a software simulation project where multiple virtual robots interact in a shared environment. 
-                            The project involves developing a server-side system that manages robot instances, processes commands, and 
-                            maintains the state of the world. <br>It was developed as part of the WeThinkCode_ Brownfields project, 
-                            where I worked with an existing codebase to refine functionality.</p></div>
-                    <h3>Robot Worlds</h3>
+            <div class="projects">
 
-                    
-                    
+                <div class="project-img-container">
+                    <img class="project-img" src="images/projects/laptop.jpg" alt="">
+                </div>
+
+
+                <div class="projects-pair">
+
+                    <h3 class="project-name">personal portfoilio</h3>
+                        
+                    <p>This project is a personal portfolio website designed to showcase my skills. 
+                    </p>
+                </div>
+
+                <div class="project-link-container">
+                    <a href="link"></a>
+                </div>   
+               
+            </div>
+
+            <div class="projects">
+                <div class="project-img-container">
+                    <img class="project-img" src="images/projects/robotworlds.jpg" alt="Robot World">
+                </div>
+
+                <div class="projects-pair">
+                    <h3 class="prject-name">Robot Worlds</h3>
+                    <p>Robot Worlds is a software simulation project where multiple virtual robots.</p>
+                </div>
+                <div class="project-link-container">
+                    <a href="link"></a>
                 </div>
             </div>
 
-        </div>
 
+        </div>
     </section>
 
     <section class="contact-section" id="contact">
-        <h3>Contact Me</h3>
-        
-                <form action="https://formsubmit.co/siyabongangwenyama22@gmail.com" method="POST">
-                    <label for="name"></label>
-                    <input type="text" id="name" name="name" required placeholder="Your name..">
-                    
-                    <label for="email"></label>
-                    <input type="email" id="email" name="email" required placeholder="Your email..">
-                    
-                    <label for="subject"></label>
-                    <input type="text" id="subject" name="subject" required placeholder="Subject..">
-                    
-                    <label for="message"></label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                    
-                    <input type="submit" value="Send Message">
-                </form>
+
+        <div class="contact-me">
+
+            <h3 class="heading" >Contact Me</h3>
+
+            <form class="contact-form" action="https://formsubmit.co/siyabongangwenyama22@gmail.com" method="POST">
+                <label for="name"></label>
+                <input type="text" id="name" name="name" required placeholder="Your name..">
+                
+                <label for="email"></label>
+                <input type="email" id="email" name="email" required placeholder="Your email..">
+                
+                <label for="subject"></label>
+                <input type="text" id="subject" name="subject" required placeholder="Subject..">
+                
+                <label for="message"></label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <input type="submit" value="Send Message">
+            </form>
+
+        </div>
 
     </section>   
 
-    <footer>
-        <p>Copyright &#169; 2025 @Siyabonga Ngwenyama. All Rights Reserved.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Designed and Developed by @Siyabonga Ngwenyama.</p>
+            <p>Lets connect on <a href="https://www.linkedin.com/in/siyabonga-ngwenyama-4a4557220/">Linkedin</a></p>
+        </div>
     </footer>
 
     <!-- JavaScript -->
