@@ -1,7 +1,7 @@
 // Navbar scroll effect
 window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
-    const navLinks = document.querySelectorAll(".nav-links a"); // Selects all the anchor links
+    const navLinks = document.querySelectorAll(".nav-links li a"); // Selects all the anchor links
     const hamburgerBars = document.querySelectorAll(".hamburger .bar"); // Selects all the bars inside hamburger
     const logo = document.querySelector(".logo a"); // Selects the logo anchor tag
 
@@ -9,7 +9,7 @@ window.addEventListener("scroll", function () {
     console.log('Scroll position:',this.window.scrollY);
 
 
-    if (window.scrollY > 20) {
+    if (window.scrollY > 670) {
         navbar.classList.add("scrolled");
 
         // Change link colors to black

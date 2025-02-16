@@ -442,6 +442,7 @@ section {
     padding-bottom: 50px;
     row-gap: 20px;
     justify-content: space-between;
+
   }
 
 
@@ -468,6 +469,35 @@ section {
     row-gap: 5px;
 }
 
+.project-buttons{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.github-btn{
+    /* background-color: rgb(250, 232, 198); */
+    background-color: white;
+}
+
+.github-btn:hover{
+    transform: scale(1.1) translateY(-5px);
+    background-color: skyblue;
+    box-shadow: 0 0 15px skyblue;
+}
+
+.live-btn{
+    /* background-color: rgb(250, 232, 198); */
+    background-color: white;
+}
+
+.live-btn:hover{
+    transform: scale(1.1) translateY(-5px);
+    background-color: skyblue;
+    box-shadow: 0 0 15px skyblue;
+}
+
+
 .project-img-contaier {
     width: 100%; 
     flex-shrink: 0;
@@ -484,6 +514,8 @@ section {
 .project-img{
     text-align: center;
 }
+
+
 
 
 .contact-section{
